@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" accessibleRole="BUTTON" cache="true" cacheHint="SPEED" depthTest="DISABLE" focusTraversable="true" pickOnBounds="false" prefHeight="202.0" prefWidth="288.0" stylesheets="@bantsiz.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController4">
+   <children>
+      <ImageView fx:id="img1" fitHeight="373.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txt1" layoutX="75.0" layoutY="14.0" promptText="Nick" />
+      <TextField fx:id="txt2" layoutX="75.0" layoutY="46.0" promptText="Şifre" />
+      <Button fx:id="btn1" layoutX="112.0" layoutY="87.0" mnemonicParsing="false" onAction="#giris" prefHeight="26.0" prefWidth="74.0" text="Giriş">
+         <effect>
+            <Bloom>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow>
+                           <color>
+                              <Color red="0.3632800579071045" green="0.8736842274665833" blue="0.2847563326358795" />
+                           </color>
+                        </Shadow>
+                     </bumpInput>
+                     <light>
+                        <Light.Distant>
+                           <color>
+                              <Color red="0.18631578981876373" green="0.8526315689086914" blue="0.21963158249855042" />
+                           </color>
+                        </Light.Distant>
+                     </light>
+                  </Lighting>
+               </input>
+            </Bloom>
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn2" alignment="TOP_CENTER" layoutX="74.0" layoutY="151.0" mnemonicParsing="false" onAction="#istatistik" prefHeight="26.0" prefWidth="150.0" text="İstatistik Al" textFill="#0f3ebf" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Unicode MS" size="12.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow blurType="ONE_PASS_BOX" />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.14814814925193787" green="1.0" blue="0.9006173014640808" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+   </children>
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="root" />
+   </styleClass>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pane" prefHeight="631.0" prefWidth="481.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="application.HayvanGir">
+   <children>
+      <ImageView fx:id="backround" fitHeight="631.0" fitWidth="479.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txt_ad" layoutX="102.0" layoutY="85.0" prefHeight="26.0" prefWidth="296.0" promptText="AD" />
+      <TextField fx:id="txt_tur" layoutX="102.0" layoutY="228.0" prefHeight="26.0" prefWidth="296.0" promptText="Özel Türü" />
+      <TextField fx:id="txt_sag" layoutX="102.0" layoutY="273.0" prefHeight="26.0" prefWidth="296.0" promptText="Sağlık Durumu" />
+      <TextField fx:id="txt_foto" layoutX="102.0" layoutY="315.0" prefHeight="26.0" prefWidth="296.0" promptText="Fotoğraf URL" />
+      <TextField fx:id="txt_not" layoutX="102.0" layoutY="361.0" prefHeight="74.0" prefWidth="296.0" />
+      <ChoiceBox fx:id="chc1_Cesit" layoutX="100.0" layoutY="134.0" onDragDetected="#dragdetect" onDragDone="#dragdone" prefHeight="26.0" prefWidth="296.0" />
+      <ChoiceBox fx:id="chc2_Tur" layoutX="100.0" layoutY="176.0" onInputMethodTextChanged="#inputtext" prefHeight="26.0" prefWidth="296.0" />
+      <DatePicker fx:id="date_muayne" layoutX="100.0" layoutY="457.0" promptText="Muayne Tarihi" />
+      <DatePicker fx:id="dogum_tarihi" layoutX="100.0" layoutY="498.0" promptText="Doğum Tarihi" />
+      <Label fx:id="lbl1" layoutX="100.0" layoutY="534.0" />
+      <Button fx:id="btn_kaydet" layoutX="102.0" layoutY="563.0" mnemonicParsing="false" onAction="#KAydet" prefHeight="46.0" prefWidth="296.0" text="Kaydet" textFill="#1e199c">
+         <font>
+            <Font name="Britannic Bold" size="26.0" />
+         </font>
+      </Button>
+      <Label layoutX="100.0" layoutY="13.0" prefHeight="74.0" prefWidth="296.0" text="Hayvan Kayıt Formu" textFill="#0819d4">
+         <font>
+            <Font name="Berlin Sans FB" size="32.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="chc3_cinsiyet" layoutX="295.0" layoutY="458.0" prefHeight="26.0" prefWidth="99.0" />
+      <Label layoutX="102.0" layoutY="117.0" text="Çeşit Seçin" textFill="WHITE" />
+      <Label layoutX="100.0" layoutY="160.0" text="Tür Seçin" textFill="WHITE" />
+      <Label layoutX="295.0" layoutY="441.0" text="Cinsiyet Seçin" textFill="WHITE" />
+      <Button fx:id="btnana" layoutX="-2.0" mnemonicParsing="false" onAction="#anamenu" prefHeight="26.0" prefWidth="175.0" text="Ana Menüye Dön" textFill="#193dbf" />
+   </children>
+</AnchorPane>
